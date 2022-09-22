@@ -17,7 +17,7 @@ RUN pip3 install --upgrade pip --no-cache-dir && \
 ## Step 4:
 # Expose port 80
 EXPOSE 80
-invalid line to verify circleci is running
+
 ## Step 5:
 # Run app.py at container launch
 CMD [ "python", "app.py"]
