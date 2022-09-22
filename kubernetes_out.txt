@@ -1,0 +1,9 @@
+jllovet (main *) udacity-operationalizing-a-microservice-api
+λ ./run_kubernetes.sh 
+deployment.apps/jllovet-udacitydevops unchanged
+service/jllovet-udacitydevops-service unchanged
+NAME                                     READY   STATUS    RESTARTS   AGE
+jllovet-udacitydevops-598fcc68d8-tfdk4   1/1     Running   0          65s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
