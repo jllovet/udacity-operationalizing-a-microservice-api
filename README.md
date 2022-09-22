@@ -1,4 +1,5 @@
-<include a CircleCI status badge, here>
+# Udacity Devops Nanodegree Project - Operationalizing a Microservice API:
+[![jllovet](https://circleci.com/gh/jllovet/udacity-operationalizing-a-microservice-api.svg?style=svg)](https://app.circleci.com/pipelines/github/jllovet/udacity-operationalizing-a-microservice-api)
 
 ## Project Overview
 
