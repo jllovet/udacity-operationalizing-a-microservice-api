@@ -22,8 +22,10 @@ test:
 
 lint:
 	# See local hadolint install instructions:   https://github.com/hadolint/hadolint
-	# This is linter for Dockerfiles
-	hadolint Dockerfile
+	# This is linter for Dockerfiles. We are going to use Docker to run this, so that we
+	# are not dependent on the environment we are running it in.
+	# Install hadolint
+	docker run --rm -i hadolint/hadolint < Dockerfile
 	# This is a linter for Python source code linter: https://www.pylint.org/
 	# This should be run from inside a virtualenv
 	pylint --disable=R,C,W1203,W1202 app.py
