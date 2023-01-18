@@ -1,57 +1,32 @@
 # Udacity Devops Nanodegree Project - Operationalizing a Microservice API:
 [![jllovet](https://circleci.com/gh/jllovet/udacity-operationalizing-a-microservice-api.svg?style=svg)](https://app.circleci.com/pipelines/github/jllovet/udacity-operationalizing-a-microservice-api)
 
-## Overview
+## Project Overview
 
-This is an example of how to operationalize a Machine Learning Microservice API using standard devops tools like Docker and Kubernetes.
+In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
 
-This repository is based on the project `Operationalize a Machine Learning Microservice API` in the Udacity Devops Nanodegree. The rubric for the project can be found [here](https://review.udacity.com/#!/rubrics/2576/view).
-
-Given a pre-trained `sklearn` model based on a [Kaggle dataset](https://www.kaggle.com/c/boston-housing) that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on, the task is to operationalize the deployment of an API based on that model. The code for the API is also provided, but some extensions are made to validate that a pipeline of automated linters and tests work properly.
+You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
 
 ### Project Tasks
 
-We are going to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications.
-
-To get there, we also do the following:
-
-* Validate the project code using linting
+Your project goal is to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications. In this project you will:
+* Test your project code using linting
 * Complete a Dockerfile to containerize this application
-* Deploy the containerized application using Docker and make a prediction
+* Deploy your containerized application using Docker and make a prediction
 * Improve the log statements in the source code for this application
 * Configure Kubernetes and create a Kubernetes cluster
 * Deploy a container using Kubernetes and make a prediction
-* Upload a complete Github repo with CircleCI to indicate that the code has been tested
+* Upload a complete Github repo with CircleCI to indicate that your code has been tested
 
-### A Tour
+You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
 
-Some files of interest in the repository:
-
-#### Python Files
-
-* `app.py` - source code for the API that uses the model to make predictions
-* `requirements.txt` - a set of python dependencies required for the application
-* `Makefile` - an abstraction of commands needed in setting up and working with a python virtual environment
-* `make_prediction.sh` - a curl command to make an HTTP request for a prediction
-
-#### Docker Files
-
-* `Dockerfile` - a definition of a Docker image that provides a standard environment for the API to run in
-* `upload_docker.sh` - a script to upload a docker image to Docker Hub
-* `run_docker.sh` - a script to run the application in a docker container
-
-#### Kubernetes Files
-
-* `jllovet-udacitydevops.yaml` - a definition of a Kubernetes deployment for the API
-* `run_kubernetes.sh` - a script to run the application in a Kubernetes cluster
-
-#### CircleCI Files
-
-* `.circleci/config.yml` - a definition of the job that runs in CircleCI to validate and build our changes
+**The final implementation of the project will showcase your abilities to operationalize production microservices.**
 
 ---
 
-## Setup the Environment
+## Setup
+
+We will describe a few ways to run the project. The first will be in a Python [virtual environment](https://docs.python.org/3/library/venv.html) on your host, the second will be in a Docker container, and the third will be in a Kubernetes cluster.
 
 * Create a virtualenv with Python 3.7 and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
 ```bash
