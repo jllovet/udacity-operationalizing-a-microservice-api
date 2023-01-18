@@ -1,4 +1,4 @@
-# Udacity Devops Nanodegree Project - Operationalizing a Microservice API:
+# Udacity Devops Nanodegree Project - Operationalizing a Microservice API
 [![jllovet](https://circleci.com/gh/jllovet/udacity-operationalizing-a-microservice-api.svg?style=svg)](https://app.circleci.com/pipelines/github/jllovet/udacity-operationalizing-a-microservice-api)
 
 ## Overview
