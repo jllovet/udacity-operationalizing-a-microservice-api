@@ -23,9 +23,31 @@ To get there, we also do the following:
 * Deploy a container using Kubernetes and make a prediction
 * Upload a complete Github repo with CircleCI to indicate that the code has been tested
 
-You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
+### A Tour
 
-**The final implementation of the project will showcase your abilities to operationalize production microservices.**
+Some files of interest in the repository:
+
+#### Python Files
+
+* `app.py` - source code for the API that uses the model to make predictions
+* `requirements.txt` - a set of python dependencies required for the application
+* `Makefile` - an abstraction of commands needed in setting up and working with a python virtual environment
+* `make_prediction.sh` - a curl command to make an HTTP request for a prediction
+
+#### Docker Files
+
+* `Dockerfile` - a definition of a Docker image that provides a standard environment for the API to run in
+* `upload_docker.sh` - a script to upload a docker image to Docker Hub
+* `run_docker.sh` - a script to run the application in a docker container
+
+#### Kubernetes Files
+
+* `jllovet-udacitydevops.yaml` - a definition of a Kubernetes deployment for the API
+* `run_kubernetes.sh` - a script to run the application in a Kubernetes cluster
+
+#### CircleCI Files
+
+* `.circleci/config.yml` - a definition of the job that runs in CircleCI to validate and build our changes
 
 ---
 
