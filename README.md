@@ -1,11 +1,13 @@
 # Udacity Devops Nanodegree Project - Operationalizing a Microservice API:
 [![jllovet](https://circleci.com/gh/jllovet/udacity-operationalizing-a-microservice-api.svg?style=svg)](https://app.circleci.com/pipelines/github/jllovet/udacity-operationalizing-a-microservice-api)
 
-## Project Overview
+## Overview
 
-In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
+This is an example of how to operationalize a Machine Learning Microservice API using standard devops tools like Docker and Kubernetes.
 
-You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
+This repository is based on the project `Operationalize a Machine Learning Microservice API` in the Udacity Devops Nanodegree. The rubric for the project can be found [here](https://review.udacity.com/#!/rubrics/2576/view).
+
+Given a pre-trained `sklearn` model based on a [Kaggle dataset](https://www.kaggle.com/c/boston-housing) that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on, the task is to operationalize the deployment of an API based on that model. The code for the API is also provided, but some extensions are made to validate that a pipeline of automated linters and tests work properly.
 
 ### Project Tasks
 
