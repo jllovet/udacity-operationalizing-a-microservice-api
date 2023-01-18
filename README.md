@@ -126,6 +126,12 @@ Our last option is to run the application in a Kubernetes cluster. Like before, 
 
 * Run via kubectl
 
+If you are running a Kubernetes cluster locally, you should run the following (you many need to specify a driver, depending on your host):
+
+```shell
+minikube start
+```
+
 Here you can run the script `run_kubernetes.sh`. It will:
 
 1. Set a value for the dockerpath
